@@ -4,23 +4,33 @@
   <meta charset="UTF-8" />
   <title>Billa Informática | PCs sob medida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: #0f1624;
       color: #ffffff;
     }
+
+    /* Header */
     header {
       display: flex;
       align-items: center;
-      padding: 20px 40px;
+      padding: 26px 40px;
       border-bottom: 1px solid #1f2937;
+      background: #0f1624;
     }
+
     header img {
       height: 72px;
-      width: auto;
+      width: auto; /* não distorce */
+      display: block;
     }
+
+    /* Hero */
     .hero {
       padding: 60px 40px;
       display: grid;
@@ -28,46 +38,150 @@
       gap: 40px;
       align-items: center;
     }
+
     .hero h1 {
       font-size: 42px;
       line-height: 1.2;
+      margin: 0 0 14px;
     }
+
     .hero span {
       color: #1aff9c;
     }
+
+    .hero p {
+      margin: 0 0 16px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      border: 1px solid #1f2937;
+    }
+
+    /* Button */
     .btn {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 14px;
       padding: 14px 28px;
       background: #1aff9c;
       color: #000;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 10px;
       font-weight: bold;
     }
+
+    .btn:hover {
+      filter: brightness(1.05);
+    }
+
+    /* Sections */
     .section {
       padding: 60px 40px;
     }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-size: 24px;
+    }
+
+    /* Grid cards */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
     }
+
+    /* Cards (serve tanto para <div> quanto para <a>) */
     .card {
+      display: block;
       background: #111827;
-      padding: 24px;
-      border-radius: 10px;
+      padding: 18px;
+      border-radius: 14px;
       border: 1px solid #1f2937;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
     }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      transition: transform 0.18s ease, border-color 0.18s ease;
+    }
+
+    .card-link:hover {
+      transform: translateY(-4px);
+      border-color: rgba(26,255,156,0.35);
+    }
+
+    .card h3 {
+      margin: 10px 0 6px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    /* Imagem dentro do card */
+    .card-img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      border: 1px solid #1f2937;
+      margin-bottom: 12px;
+    }
+
+    /* Placeholder (quando você ainda não subiu a imagem do jogo) */
+    .img-placeholder {
+      width: 100%;
+      height: 140px;
+      background: #0b1220;
+      border: 1px dashed #1aff9c;
+      border-radius: 10px;
+      margin-bottom: 12px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 14px;
+      color: #1aff9c;
+    }
+
+    /* Footer */
     footer {
-      padding: 20px;
+      padding: 22px;
       text-align: center;
       font-size: 14px;
       color: #9ca3af;
       border-top: 1px solid #1f2937;
     }
+
+    /* Responsivo */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      header, .hero, .section {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      header img {
+        height: 64px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -80,8 +194,9 @@
     <p>Configurações pensadas para o seu uso real, com suporte e orientação profissional.</p>
     <a class="btn" href="https://wa.me/554140404855" target="_blank">Falar no WhatsApp</a>
   </div>
+
   <div>
-    <img src="pc.png" alt="PC Gamer" style="width:100%; border-radius:12px;">
+    <img src="pc.png" alt="PC Gamer">
   </div>
 </section>
 
@@ -90,34 +205,20 @@
 
   <div class="cards">
 
-    <!-- GTA V -->
+    <!-- GTA V (com imagem pronta) -->
     <a class="card card-link"
        href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20rodar%20GTA%20V.%20Pode%20me%20indicar%20uma%20configuração?"
        target="_blank">
-
       <img src="GTAV.png" alt="PC para GTA V" class="card-img">
-      
       <h3>GTA V</h3>
       <p>Configuração equilibrada para rodar liso.</p>
     </a>
-
-    .card-img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
 
     <!-- Valorant -->
     <a class="card card-link"
        href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20rodar%20Valorant%20com%20bom%20FPS.%20Pode%20me%20ajudar?"
        target="_blank">
-
-      <div class="img-placeholder">
-        IMAGEM VALORANT
-      </div>
-
+      <div class="img-placeholder">IMAGEM VALORANT</div>
       <h3>Valorant</h3>
       <p>FPS alto, resposta rápida e estabilidade.</p>
     </a>
@@ -126,11 +227,7 @@
     <a class="card card-link"
        href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20rodar%20Minecraft.%20Pode%20me%20indicar%20uma%20configuração?"
        target="_blank">
-
-      <div class="img-placeholder">
-        IMAGEM MINECRAFT
-      </div>
-
+      <div class="img-placeholder">IMAGEM MINECRAFT</div>
       <h3>Minecraft</h3>
       <p>Ideal para vanilla ou mods leves.</p>
     </a>
@@ -139,11 +236,7 @@
     <a class="card card-link"
        href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20rodar%20Roblox.%20Pode%20me%20indicar%20uma%20configuração?"
        target="_blank">
-
-      <div class="img-placeholder">
-        IMAGEM ROBLOX
-      </div>
-
+      <div class="img-placeholder">IMAGEM ROBLOX</div>
       <h3>Roblox</h3>
       <p>Perfeito para iniciantes e estudos.</p>
     </a>
@@ -152,11 +245,7 @@
     <a class="card card-link"
        href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20rodar%20Battlefield.%20Pode%20me%20indicar%20uma%20configuração?"
        target="_blank">
-
-      <div class="img-placeholder">
-        IMAGEM BATTLEFIELD
-      </div>
-
+      <div class="img-placeholder">IMAGEM BATTLEFIELD</div>
       <h3>Battlefield</h3>
       <p>Desempenho para jogos mais pesados.</p>
     </a>
@@ -166,11 +255,41 @@
 
 <section class="section">
   <h2>Uso profissional e escritórios</h2>
+
   <div class="cards">
-    <div class="card">Home Office</div>
-    <div class="card">Empresas</div>
-    <div class="card">Estudos</div>
-    <div class="card">Edição e design</div>
+
+    <a class="card card-link"
+       href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20Home%20Office.%20Pode%20me%20indicar%20uma%20configuração%20com%20bom%20custo-benefício?"
+       target="_blank">
+      <div class="img-placeholder">IMAGEM HOME OFFICE</div>
+      <h3>Home Office</h3>
+      <p>Rápido, silencioso e confiável para o dia a dia.</p>
+    </a>
+
+    <a class="card card-link"
+       href="https://wa.me/554140404855?text=Olá!%20Preciso%20de%20PCs%20para%20empresa%20(escritório/ERP/atendimento).%20Pode%20me%20passar%20uma%20sugestão?"
+       target="_blank">
+      <div class="img-placeholder">IMAGEM EMPRESAS</div>
+      <h3>Empresas</h3>
+      <p>Máquinas estáveis para operação e produtividade.</p>
+    </a>
+
+    <a class="card card-link"
+       href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20Estudos.%20Pode%20me%20indicar%20uma%20configuração?"
+       target="_blank">
+      <div class="img-placeholder">IMAGEM ESTUDOS</div>
+      <h3>Estudos</h3>
+      <p>Ideal para aulas, trabalhos e plataformas online.</p>
+    </a>
+
+    <a class="card card-link"
+       href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20Edição%20e%20Design%20(Photoshop/edição%20de%20vídeo).%20Pode%20me%20ajudar?"
+       target="_blank">
+      <div class="img-placeholder">IMAGEM EDIÇÃO/DESIGN</div>
+      <h3>Edição e design</h3>
+      <p>Desempenho para criação, render e multitarefa.</p>
+    </a>
+
   </div>
 </section>
 
