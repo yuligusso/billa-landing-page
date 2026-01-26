@@ -15,7 +15,7 @@
       color: #ffffff;
     }
 
-    /* ================= TOPO / HERO ================= */
+    /* ================= HERO ================= */
     .top-hero {
       padding: 70px 40px;
       border-bottom: 1px solid #1f2937;
@@ -42,8 +42,6 @@
     .brand-logo {
       max-width: 340px;
       width: 100%;
-      height: auto;
-      display: block;
       filter: drop-shadow(0 12px 40px rgba(0,0,0,0.35));
     }
 
@@ -65,7 +63,6 @@
       max-width: 560px;
     }
 
-    /* ================= BOTÕES ================= */
     .btn {
       display: inline-block;
       padding: 14px 28px;
@@ -75,31 +72,6 @@
       border-radius: 12px;
       font-weight: bold;
       box-shadow: 0 12px 30px rgba(26,255,156,0.14);
-    }
-    .btn:hover { filter: brightness(1.05); }
-
-    .btn-secondary {
-      display: inline-block;
-      padding: 12px 18px;
-      background: rgba(17,24,39,0.6);
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: bold;
-      border: 1px solid #1f2937;
-    }
-    .btn-secondary:hover {
-      border-color: rgba(26,255,156,0.35);
-      transform: translateY(-1px);
-      transition: 0.18s ease;
-    }
-
-    .hero-right img {
-      width: 100%;
-      border-radius: 16px;
-      border: 1px solid #1f2937;
-      box-shadow: 0 18px 50px rgba(0,0,0,0.35);
-      display: block;
     }
 
     .hero-mini {
@@ -118,111 +90,53 @@
       border: 1px solid #1f2937;
     }
 
+    /* ================= CARROSSEL ================= */
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid #1f2937;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+    }
+
+    .carousel img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .carousel img.active {
+      opacity: 1;
+    }
+
     /* ================= SEÇÕES ================= */
     .section {
       padding: 60px 40px;
     }
 
-    .section-header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-      flex-wrap: wrap;
-    }
-
     .section h2 {
-      margin: 0;
       font-size: 24px;
+      margin-bottom: 18px;
     }
 
-    .section-sub {
-      margin: 8px 0 0;
-      color: #cbd5e1;
-      font-size: 14px;
-      max-width: 720px;
-      line-height: 1.5;
-    }
-
-    /* ================= GRID ================= */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 18px;
     }
 
-    /* ================= CARD ================= */
     .card {
-      display: block;
       background: #111827;
       padding: 18px;
       border-radius: 14px;
       border: 1px solid #1f2937;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
     }
 
-    .card-link {
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.18s ease, border-color 0.18s ease;
-    }
-
-    .card-link:hover {
-      transform: translateY(-4px);
-      border-color: rgba(26,255,156,0.35);
-    }
-
-    .card h3 {
-      margin: 10px 0 6px;
-      font-size: 18px;
-    }
-
-    .card p {
-      margin: 0;
-      font-size: 14px;
-      color: #cbd5e1;
-      line-height: 1.4;
-    }
-
-    /* ================= IMAGEM DO CARD ================= */
-    .card-img {
-      width: 100%;
-      height: 180px;
-      object-fit: contain;
-      background: #0b1220;
-      padding: 10px;
-      border-radius: 10px;
-      border: 1px solid #1f2937;
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    /* Placeholder para quando você ainda não tiver imagem */
-    .img-placeholder {
-      width: 100%;
-      height: 180px;
-      background: #0b1220;
-      border: 1px dashed rgba(26,255,156,0.75);
-      border-radius: 10px;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: #1aff9c;
-    }
-
-    /* ================= "POR QUE A BILLA" ================= */
-    .why-grid .card {
-      padding: 20px;
-    }
-    .why-title {
-      margin: 0 0 10px;
-      font-size: 18px;
-    }
-
-    /* ================= FOOTER ================= */
     footer {
       padding: 22px;
       text-align: center;
@@ -240,10 +154,6 @@
       .hero-text h1 {
         font-size: 34px;
       }
-      .section {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
     }
   </style>
 </head>
@@ -260,8 +170,8 @@
     <div class="hero-text">
       <h1>PCs <span>sob medida</span><br>para jogos, trabalho e escritório</h1>
       <p>
-        Configurações pensadas para o seu uso real, com orientação profissional
-        e suporte especializado.
+        Montagem profissional, upgrades inteligentes e suporte direto
+        para quem não quer dor de cabeça.
       </p>
 
       <a class="btn" href="https://wa.me/554140404855" target="_blank">
@@ -269,204 +179,38 @@
       </a>
 
       <div class="hero-mini">
-        <div class="pill">✔ Montagem e testes</div>
-        <div class="pill">✔ Upgrade inteligente</div>
-        <div class="pill">✔ Suporte direto</div>
+        <div class="pill">✔ PCs Gamer</div>
+        <div class="pill">✔ Peças e upgrades</div>
+        <div class="pill">✔ Promoções</div>
+        <div class="pill">✔ Suporte técnico</div>
       </div>
     </div>
 
-    <div class="hero-right">
-      <img src="pc.png" alt="PC Gamer">
+    <!-- CARROSSEL -->
+    <div class="carousel">
+      <img src="SLIDE1.png" class="active" alt="PC Gamer">
+      <img src="SLIDE2.png" alt="Peças e Upgrades">
+      <img src="SLIDE3.png" alt="Promoções">
+      <img src="SLIDE4.png" alt="Montagem e Técnico">
     </div>
 
   </div>
 </header>
 
-<!-- ================= POR QUE A BILLA ================= -->
-<section class="section">
-  <div class="section-header">
-    <div>
-      <h2>Por que a Billa?</h2>
-      <p class="section-sub">
-        Mais do que vender peça, a gente entrega uma máquina estável, bem montada e pronta para o seu uso real — com suporte depois da compra.
-      </p>
-    </div>
-
-    <a class="btn-secondary"
-       href="https://wa.me/554140404855?text=Olá!%20Vim%20pelo%20site%20da%20Billa.%20Quero%20solicitar%20um%20orçamento%20e%20uma%20recomendação%20de%20configuração."
-       target="_blank">
-      Solicitar orçamento
-    </a>
-  </div>
-
-  <div class="cards why-grid">
-    <div class="card">
-      <h3 class="why-title">Consultoria antes da compra</h3>
-      <p>Você diz o uso e o orçamento. A Billa indica a melhor configuração e explica o porquê (sem exagero de peça cara).</p>
-    </div>
-
-    <div class="card">
-      <h3 class="why-title">Montagem caprichada e testada</h3>
-      <p>Organização interna, testes e validação do conjunto para reduzir travamentos e dores de cabeça.</p>
-    </div>
-
-    <div class="card">
-      <h3 class="why-title">Custo inteligente</h3>
-      <p>Configuração equilibrada: desempenho onde importa e economia onde não faz diferença.</p>
-    </div>
-
-    <div class="card">
-      <h3 class="why-title">Suporte pós-venda</h3>
-      <p>WhatsApp direto com quem entende. Orientação para upgrades, ajustes e dúvidas do dia a dia.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= LINHA 1: JOGOS ================= -->
-<section class="section">
-  <div class="section-header">
-    <div>
-      <h2>PCs específicos para jogos</h2>
-      <p class="section-sub">Clique no jogo e fale com a Billa no WhatsApp já pedindo uma configuração para ele.</p>
-    </div>
-
-    <a class="btn-secondary"
-       href="https://wa.me/554140404855?text=Olá!%20Quero%20solicitar%20um%20orçamento%20para%20um%20PC%20Gamer.%20Meu%20orçamento%20é%20(VALOR)%20e%20os%20jogos%20que%20quero%20rodar%20são:%20(ESCREVER)."
-       target="_blank">
-      Solicitar orçamento
-    </a>
-  </div>
-
-  <div class="cards">
-    <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20rodar%20GTA%20V.%20Pode%20me%20indicar%20uma%20configuração?"
-       target="_blank">
-      <img src="GTAV.png" alt="PC para GTA V" class="card-img">
-      <h3>GTA V</h3>
-      <p>Configuração equilibrada para rodar liso.</p>
-    </a>
-
-    <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20rodar%20Valorant%20com%20bom%20FPS.%20Pode%20me%20ajudar?"
-       target="_blank">
-      <img src="VALORANT.png" alt="PC para VALORANT" class="card-img">
-      <h3>Valorant</h3>
-      <p>FPS alto, resposta rápida e estabilidade.</p>
-    </a>
-
-    <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20rodar%20Minecraft.%20Pode%20me%20indicar%20uma%20configuração?"
-       target="_blank">
-      <img src="MINECRAFT.png" alt="PC para MINECRAFT" class="card-img">
-      <h3>Minecraft</h3>
-      <p>Ideal para vanilla ou mods leves.</p>
-    </a>
-
-    <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20rodar%20Roblox.%20Pode%20me%20indicar%20uma%20configuração?"
-       target="_blank">
-      <img src="ROBLOX.png" alt="PC para ROBLOX" class="card-img">
-      <h3>Roblox</h3>
-      <p>Perfeito para iniciantes e estudos.</p>
-    </a>
-
-    <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20rodar%20Battlefield.%20Pode%20me%20indicar%20uma%20configuração?"
-       target="_blank">
-      <img src="BATTLEFIELD.png" alt="PC para BATTLEFIELD" class="card-img">
-      <h3>Battlefield</h3>
-      <p>Desempenho para jogos mais pesados.</p>
-    </a>
-  </div>
-</section>
-
-<!-- ================= LINHA 2: EMPRESARIAL ================= -->
-<section class="section">
-  <div class="section-header">
-    <div>
-      <h2>PCs empresariais</h2>
-      <p class="section-sub">PCs estáveis e rápidos para operação do dia a dia, com foco em produtividade e confiabilidade.</p>
-    </div>
-
-    <a class="btn-secondary"
-       href="https://wa.me/554140404855?text=Olá!%20Quero%20solicitar%20orçamento%20para%20PC%20empresarial.%20Uso:%20(PDV/Escritório/Edição).%20Quantidade:%20(QTD).%20Orçamento:%20(VALOR)."
-       target="_blank">
-      Solicitar orçamento
-    </a>
-  </div>
-
-  <div class="cards">
-    <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Preciso%20de%20um%20PC%20para%20uso%20em%20PDV%20(frente%20de%20caixa).%20Pode%20me%20indicar%20uma%20configuração%20estável%20e%20custo-benefício?"
-       target="_blank">
-      <img src="PDV.png" alt="Computador para PDV" class="card-img">
-      <h3>Uso em PDV</h3>
-      <p>Estabilidade para frente de caixa e sistemas de venda.</p>
-    </a>
-
-    <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Preciso%20de%20um%20PC%20para%20escritório%20(Excel/ERP/atendimento).%20Pode%20me%20indicar%20uma%20configuração%20rápida%20e%20confiável?"
-       target="_blank">
-      <img src="ESCRITORIO.png" alt="Computador para Escritórios" class="card-img">
-      <h3>Uso em escritórios</h3>
-      <p>Produtividade para rotina de empresa e home office.</p>
-    </a>
-
-    <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Preciso%20de%20um%20PC%20para%20edição%20de%20imagens%20e%20vídeos%20(Photoshop/Premiere/DaVinci).%20Pode%20me%20indicar%20uma%20configuração%20ideal?"
-       target="_blank">
-      <img src="EDICAO.png" alt="Computador para Edição de Imagem e vídeo" class="card-img">
-      <h3>Edição de imagens e vídeos</h3>
-      <p>Performance para criação, render e multitarefa.</p>
-    </a>
-  </div>
-</section>
-
-<!-- ================= LINHA 3: SERVIÇOS ================= -->
-<section class="section">
-  <div class="section-header">
-    <div>
-      <h2>Serviços</h2>
-      <p class="section-sub">Atendimento para manutenção, upgrades e melhorias de desempenho.</p>
-    </div>
-
-    <a class="btn-secondary"
-       href="https://wa.me/554140404855?text=Olá!%20Quero%20solicitar%20orçamento%20para%20serviço%20no%20PC.%20Serviço:%20(Preventiva/Corretiva/Upgrade).%20Pode%20me%20ajudar?"
-       target="_blank">
-      Solicitar orçamento
-    </a>
-  </div>
-
-  <div class="cards">
-    <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Quero%20fazer%20manutenção%20preventiva%20no%20meu%20PC%20(limpeza%20e%20checagem).%20Pode%20me%20passar%20valores%20e%20prazo?"
-       target="_blank">
-      <img src="PREVENTIVA.png" alt="Manutenção preventiva de computador" class="card-img">
-      <h3>Manutenção preventiva</h3>
-      <p>Limpeza, revisão e prevenção de problemas.</p>
-    </a>
-
-    <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Meu%20PC%20está%20com%20problema%20e%20preciso%20de%20manutenção%20corretiva.%20Pode%20me%20ajudar%20com%20um%20diagnóstico?"
-       target="_blank">
-      <img src="CORRETIVA.png" alt="Manutenção corretiva de computador" class="card-img">
-      <h3>Manutenção corretiva</h3>
-      <p>Diagnóstico e solução de falhas e travamentos.</p>
-    </a>
-
-    <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Quero%20fazer%20upgrade%20no%20meu%20PC%20(SSD/RAM/placa%20de%20vídeo).%20Pode%20me%20indicar%20o%20melhor%20upgrade%20para%20meu%20uso?"
-       target="_blank">
-      <img src="UPGRADES.png" alt="Upgrades de computador" class="card-img">
-      <h3>Upgrades</h3>
-      <p>SSD, RAM e melhorias para ganhar desempenho.</p>
-    </a>
-  </div>
-</section>
-
 <footer>
   © 2026 • Billa Informática • Curitiba - PR
 </footer>
+
+<script>
+  const slides = document.querySelectorAll('.carousel img');
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 3500);
+</script>
 
 </body>
 </html>
