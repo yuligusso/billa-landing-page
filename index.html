@@ -111,11 +111,12 @@
     }
 
     /* ================= CARROSSEL HERO ================= */
-    .hero-right {
+    .hero-right{
   width: 100%;
+  grid-column: 1 / -1;          /* faz o carrossel pegar a linha toda */
   display: flex;
-  justify-content: center; /* centraliza horizontal */
-  align-items: center;     /* centraliza vertical */
+  justify-content: center;       /* centraliza */
+  margin-top: 24px;              /* espaçamento pra não grudar em cima */
 }
 
     .carousel {
