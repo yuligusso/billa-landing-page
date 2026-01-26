@@ -15,7 +15,7 @@
       color: #ffffff;
     }
 
-    /* Header */
+    /* ================= HEADER ================= */
     header {
       display: flex;
       align-items: center;
@@ -26,11 +26,11 @@
 
     header img {
       height: 72px;
-      width: auto; /* não distorce */
+      width: auto;
       display: block;
     }
 
-    /* Hero */
+    /* ================= HERO ================= */
     .hero {
       padding: 60px 40px;
       display: grid;
@@ -58,11 +58,11 @@
     .hero img {
       width: 100%;
       border-radius: 12px;
-      display: block;
       border: 1px solid #1f2937;
+      display: block;
     }
 
-    /* Button */
+    /* ================= BUTTON ================= */
     .btn {
       display: inline-block;
       margin-top: 14px;
@@ -78,7 +78,7 @@
       filter: brightness(1.05);
     }
 
-    /* Sections */
+    /* ================= SECTIONS ================= */
     .section {
       padding: 60px 40px;
     }
@@ -88,14 +88,14 @@
       font-size: 24px;
     }
 
-    /* Grid cards */
+    /* ================= GRID ================= */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 18px;
     }
 
-    /* Cards (serve tanto para <div> quanto para <a>) */
+    /* ================= CARD ================= */
     .card {
       display: block;
       background: #111827;
@@ -129,21 +129,23 @@
       line-height: 1.4;
     }
 
-    /* Imagem dentro do card */
+    /* ================= IMAGEM DO CARD (SEM CORTE) ================= */
     .card-img {
       width: 100%;
-      height: 140px;
-      object-fit: cover;
+      height: 180px;
+      object-fit: contain;       /* NÃO corta */
+      background: #0b1220;
+      padding: 10px;
       border-radius: 10px;
-      display: block;
       border: 1px solid #1f2937;
+      display: block;
       margin-bottom: 12px;
     }
 
-    /* Placeholder (quando você ainda não subiu a imagem do jogo) */
+    /* ================= PLACEHOLDER ================= */
     .img-placeholder {
       width: 100%;
-      height: 140px;
+      height: 180px;
       background: #0b1220;
       border: 1px dashed #1aff9c;
       border-radius: 10px;
@@ -157,7 +159,7 @@
       color: #1aff9c;
     }
 
-    /* Footer */
+    /* ================= FOOTER ================= */
     footer {
       padding: 22px;
       text-align: center;
@@ -166,12 +168,14 @@
       border-top: 1px solid #1f2937;
     }
 
-    /* Responsivo */
+    /* ================= RESPONSIVO ================= */
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
       }
-      header, .hero, .section {
+      header,
+      .hero,
+      .section {
         padding-left: 20px;
         padding-right: 20px;
       }
@@ -194,7 +198,6 @@
     <p>Configurações pensadas para o seu uso real, com suporte e orientação profissional.</p>
     <a class="btn" href="https://wa.me/554140404855" target="_blank">Falar no WhatsApp</a>
   </div>
-
   <div>
     <img src="pc.png" alt="PC Gamer">
   </div>
@@ -205,7 +208,7 @@
 
   <div class="cards">
 
-    <!-- GTA V (com imagem pronta) -->
+    <!-- GTA V -->
     <a class="card card-link"
        href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20rodar%20GTA%20V.%20Pode%20me%20indicar%20uma%20configuração?"
        target="_blank">
@@ -267,7 +270,7 @@
     </a>
 
     <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Preciso%20de%20PCs%20para%20empresa%20(escritório/ERP/atendimento).%20Pode%20me%20passar%20uma%20sugestão?"
+       href="https://wa.me/554140404855?text=Olá!%20Preciso%20de%20PCs%20para%20empresa.%20Pode%20me%20passar%20uma%20sugestão?"
        target="_blank">
       <div class="img-placeholder">IMAGEM EMPRESAS</div>
       <h3>Empresas</h3>
@@ -283,9 +286,9 @@
     </a>
 
     <a class="card card-link"
-       href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20Edição%20e%20Design%20(Photoshop/edição%20de%20vídeo).%20Pode%20me%20ajudar?"
+       href="https://wa.me/554140404855?text=Olá!%20Quero%20um%20PC%20para%20Edição%20e%20Design.%20Pode%20me%20ajudar?"
        target="_blank">
-      <div class="img-placeholder">IMAGEM EDIÇÃO/DESIGN</div>
+      <div class="img-placeholder">IMAGEM EDIÇÃO / DESIGN</div>
       <h3>Edição e design</h3>
       <p>Desempenho para criação, render e multitarefa.</p>
     </a>
